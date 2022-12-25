@@ -4,7 +4,7 @@
     getWeather('Izhevsk');
 });
 
-const dayjs = require('dayjs');
+
 
 function getWeather(city) {
     fetch('https://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=d6e481919bcce169184f16536bb64bd8&units=metric')
@@ -13,7 +13,7 @@ function getWeather(city) {
             console.log(weather);
             document.querySelector('.city')
             .innerText = weather.name;
-            document.querySelector('.date')
+            document.querySelector('.now')
             .innerText = new Date;
             document.querySelector('.tempValue').innerText = Math.round(weather.main.temp) + " ° ";
             document.querySelector('.feels_like').innerText = "feels like " + Math.round(weather.main.feels_like)  + " ° ";
