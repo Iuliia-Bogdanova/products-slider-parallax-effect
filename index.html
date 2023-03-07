@@ -4,25 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather</title>
-    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css?family=Space+Grotesk:regular,500,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Cool Sneakers</title>
 </head>
 <body>
-    <div class="wrap">
-        <main>
-            <section class="location">
-                <div class="city"></div>
-                <div class="now"></div>
-            </section>
-            <div class="current">
-                <div class="temp"><span class="tempValue"></span></div>
-                <div class="temp"><span class="feels_like"></span></div>
-                <div class="weather"></div>
-                <div class="humidity"></div>
-                <div class="visibility"></div>
+    <div class="wrapper">
+        <header class="header">
+            <a href="" class="header__logo">SHOESHOP</a>
+            <a href="" class="header__cart">Cart (<span>0</span>)</a>
+        </header>
+        <main class="product">
+            <div class="product__slider swiper">
+                <div class="product__wrapper swiper-wrapper">
+                    <div class="product__slide swiper-slide">
+                        <div class="product__body">
+                            <div class="product__content">
+                                <div class="product__image">
+                                    <img src="./img/image-01.png" class="product__picture" alt="Nike">
+                                </div>
+                            </div>
+                            <h2 class="product__title">
+                                NIKE MAG <br> BACK TO THE FUTURE
+                            </h2>
+                        </div>
+                        <div class="product__details">
+                            <div class="product__price">$749</div>
+                            <button class="product__buy" type="button">BUY NOW</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </main>
     </div>
-    <script src="./bungle.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 </html>
