@@ -1,3 +1,1 @@
-# weather_library
-week22 task2
-Сделайте страницу-дашборд, которая показывает данные о задачах в красивом и удобном виде. Данные хранятся в JSON. При разработке используйте как минимум 3 библиотеки, включая ChartJS. 
+ecommerce page with products slider parallax effect.  SWIPER HTML CSS JAVASCRIPT
