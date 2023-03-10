@@ -4,7 +4,7 @@ body {
     font-family: "Space Grotesk";
     color: #fff;
 }
-
+/* ------------- */
 .wrapper {
     position: fixed;
     width: 100%;
@@ -36,6 +36,7 @@ body {
 .header__cart {
     pointer-events: all;
 }
+/* ----------------- */
 .product {
     flex: 1 1 auto;
     display: flex;
@@ -45,23 +46,18 @@ body {
     min-height: 100%;
     overflow: hidden;
 }
-.swiper {
-}
 .product__wrapper {
     min-height: 100%;
     display: flex;
-}
-.swiper-wrapper {
 }
 .product__slide {
     min-height: 100%;
     position: relative;
     display: flex;
+    flex-shrink: 0;
     flex-direction: column;
     padding: 30px 20px 20px 20px;
 
-}
-.swiper-slide {
 }
 .product__body {
     flex: 1 1 auto;
@@ -143,4 +139,67 @@ body {
 }
 .product__buy:hover {
     text-decoration: none;
+}
+
+/* Animation on load */
+
+.wrapper {
+    opacity: 0;
+}
+
+.loaded .wrapper {
+    opacity: 1;
+    transition: opacity 0.8s ease 0s;
+}
+
+.header {
+    transform: translate(0px, -100%);
+}
+
+.loaded .header {
+    transform: translate(0px, 0px);
+    transition: transform 0.8s ease 1s;
+}
+
+.product__body,
+.product__content {
+    opacity: 0;
+    transform: translate(0px, 5%);
+}
+.loaded .product__body,
+.loaded .product__content {
+    opacity: 1;
+    transform: translate(0px, 0);
+    transition: all 0.8s ease;
+}
+.loaded .product__body {
+    transition-delay: 0.5s;
+}
+.loaded .product__content {
+    transition-delay: 0.8s;
+}
+
+.product__price,
+.product__buy {
+    opacity: 0;
+    transform: translate(0px, 100%);
+}
+.loaded .product__price,
+.loaded .product__buy {
+    opacity: 1;
+    transform: translate(0px, 0);
+    transition: all 0.8s ease 1s;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+    .header {
+        padding: 20px;
+    }
+    .header__logo,
+    .product__price,
+    .product__buy {
+        font-size: 24px;
+    }
 }
