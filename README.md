@@ -1,1 +1,1 @@
-ecommerce page with products slider parallax effect.  SWIPER HTML CSS JAVASCRIPT
+ NIKE shoeshop - ecommerce page with products slider parallax effect.  SWIPER HTML CSS JAVASCRIPT
